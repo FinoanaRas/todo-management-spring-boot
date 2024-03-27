@@ -6,24 +6,24 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading">Add TODO</div>
 				<div class="panel-body">
-					<form:form method="post" modelAttribute="todo">
-						<form:hidden path="id" />
+					<form method="post" action="/add-todo">
+						<input type="hidden" name="id"/>
 						<fieldset class="form-group">
-							<form:label path="description">Description</form:label>
-							<form:input path="description" type="text" class="form-control"
+							<label for="description">Description</label>
+							<input name="description" type="text" class="form-control"
 								required="required" />
-							<form:errors path="description" cssClass="text-warning" />
+							<!-- <errors path="description" cssClass="text-warning" /> -->
 						</fieldset>
 
 						<fieldset class="form-group">
-							<form:label path="targetDate">Target Date</form:label>
-							<form:input path="targetDate" type="text" class="form-control"
+							<label for="targetDate">Target Date</label>
+							<input name="targetDate" type="datetime-local" class="form-control"
 								required="required" />
-							<form:errors path="targetDate" cssClass="text-warning" />
+							<!-- <errors path="targetDate" cssClass="text-warning" /> -->
 						</fieldset>
 
 						<button type="submit" class="btn btn-success">Save</button>
-					</form:form>
+					</form>
 				</div>
 			</div>
 		</div>

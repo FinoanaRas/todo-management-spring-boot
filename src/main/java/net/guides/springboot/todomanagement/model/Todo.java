@@ -2,12 +2,13 @@ package net.guides.springboot.todomanagement.model;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.Size;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+
 
 @Entity
 @Table(name = "todos")
@@ -19,7 +20,6 @@ public class Todo {
 
 	private String userName;
 
-	@Size(min = 10, message = "Enter at least 10 Characters...")
 	private String description;
 
 	private Date targetDate;

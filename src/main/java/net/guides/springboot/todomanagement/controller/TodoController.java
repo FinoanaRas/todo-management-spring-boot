@@ -3,7 +3,7 @@ package net.guides.springboot.todomanagement.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.validation.Valid;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -73,7 +73,7 @@ public class TodoController {
 	}
 
 	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
-	public String updateTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
+	public String updateTodo(ModelMap model,  Todo todo, BindingResult result) {
 
 		if (result.hasErrors()) {
 			return "todo";
@@ -85,7 +85,7 @@ public class TodoController {
 	}
 
 	@RequestMapping(value = "/add-todo", method = RequestMethod.POST)
-	public String addTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
+	public String addTodo(ModelMap model, Todo todo, BindingResult result) {
 
 		if (result.hasErrors()) {
 			return "todo";
